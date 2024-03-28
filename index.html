@@ -74,13 +74,13 @@
         <ul class="main-nav-list">
           <li><a href="#">Projects</a></li>
           <li><a href="#">Education</a></li>
-          <li><a href="#">Experience</a></li>
+          <li><a href="#">Work Experience</a></li>
           <li><a href="#">Languages</a></li>
-          <li><a href="#">Certificates</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <!-- Hero Section -->
       <section class="hero">
         <div class="hero-text">
           <h1 class="hero-h1">Hello World!</h1>
@@ -106,6 +106,10 @@
             <span>Tailwind</span>
           </li>
           <li>
+            <img src="/img/styled-components.png" alt="Styled Components logo" />
+            <span>Styled Comp.</span>
+          </li>
+          <li>
             <img src="/img/router.png" alt="React Router logo" />
             <span>React Router</span>
           </li>
@@ -123,14 +127,16 @@
           </li>
         </ul>
       </section>
-      <section class="conatiner">
+      <!-- Projects Section -->
+      <section class="container projects">
         <h2>My React projects</h2>
-        <ul>
+        <ul class="projects-list">
+          <!-- DigitalGalaxy Project -->
           <li class="project">
             <div class="project-text">
               <div class="text-flex">
                 <h5>Mern app</h5>
-                <h3>DigitalGalaxy</h3>
+                <h3 class="digitalgalaxy">DigitalGalaxy</h3>
               </div>
               <div class="text-flex">
                 <h4>Description</h4>
@@ -159,10 +165,20 @@
               <div class="text-flex">
                 <h4>Technologies</h4>
                 <ul class="list-flex">
+                  <li>JavaScript library: <span>React</span></li>
                   <li>Styling: <span>React Bootstrap</span></li>
-                  <li>Routing: <span>React Router</span></li>
                   <li>UI State Management: <span>Redux</span></li>
                   <li>Backend: <span>MongoDB + Express.js + Node.js</span></li>
+                  <li>Routing: <span>React Router</span></li>
+                </ul>
+                <ul class="technologies-logos-list">
+                  <li><img src="img/react.png" alt="React logo" /></li>
+                  <li><img src="img/bootstrap.png" alt="React logo" /></li>
+                  <li><img src="img/redux.png" alt="Redux logo" /></li>
+                  <li><img src="img/router.png" alt="React Router logo" /></li>
+                  <li><img src="img/nodejs.png" alt="Nodejs logo" /></li>
+                  <li><img src="img/mongodb.png" alt="MongoDB logo" /></li>
+                  <li><img src="img/express.png" alt="Express logo" /></li>
                 </ul>
               </div>
               <div class="text-flex">
@@ -172,21 +188,246 @@
                   <li>Password: <span>123456</span></li>
                 </ul>
               </div>
-              <div>
-                <a class="link" href="https://digitalgalaxy.onrender.com/"
-                  >Go to DigitalGalaxy app</a
+              <div class="project-action">
+                <a
+                  class="link link-digitalgalaxy"
+                  href="https://digitalgalaxy.onrender.com/"
+                  >Go to DigitalGalaxy deployed on Render</a
                 >
+                <a href="https://github.com/michalwojcieszek/DigitalGalaxy">
+                  <img
+                    class="github-logo"
+                    src="/img/github.png"
+                    alt="GitHub logo"
+                  />
+                </a>
               </div>
             </div>
-            <div class="project-img">
-              <p>Image here</p>
+            <div class="project-img project-img-digitalgalaxy">
+              <img
+                src="/img/digiralgalaxy.png"
+                alt="DigitalGalaxy app on laptop, tablet and mobile phone"
+              />
+            </div>
+            <!-- TripTracker Project -->
+          </li>
+          <li class="project">
+            <div class="project-text">
+              <div class="text-flex">
+                <h5>Mern app</h5>
+                <h3 class="triptracker">TripTracker</h3>
+              </div>
+              <div class="text-flex">
+                <h4>Description</h4>
+                <p>
+                  TripTracker is the web app that allows users to tap on the map
+                  from Leaflet library and save their trips. Markers appear on
+                  the map and all the trips are listed with the name of the
+                  city, region, country, date and description. Moreover, all
+                  countries and continents visited during the trips are on a
+                  separate list. User can click the country on the list to get
+                  some basic information like e.g. flag, coat of arms,
+                  population, currency, timezones.
+                </p>
+              </div>
+              <div class="text-flex">
+                <h4>Features</h4>
+                <ul class="list-flex">
+                  <li>- account setup</li>
+                  <li>- adding and removing trips</li>
+                  <li>- placing markers of the trips on the map</li>
+                  <li>- listing all places (city or region) visited</li>
+                  <li>- listing all countries visited</li>
+                  <li>- listing all continents visited</li>
+                  <li>- getting basic country's information</li>
+                </ul>
+              </div>
+              <div class="text-flex">
+                <h4>Technologies</h4>
+                <ul class="list-flex">
+                  <li>JavaScript library: <span>React</span></li>
+                  <li>Styling: <span>Tailwind</span></li>
+                  <li>UI State Management: <span>Redux</span></li>
+                  <li>Backend: <span>MongoDB + Express.js + Node.js</span></li>
+                  <li>Routing: <span>React Router</span></li>
+                </ul>
+                <ul class="technologies-logos-list">
+                  <li><img src="img/react.png" alt="React logo" /></li>
+                  <li><img src="img/tailwind.png" alt="Tailwind logo" /></li>
+                  <li><img src="img/redux.png" alt="Redux logo" /></li>
+                  <li><img src="img/router.png" alt="React Router logo" /></li>
+                  <li><img src="img/nodejs.png" alt="Nodejs logo" /></li>
+                  <li><img src="img/mongodb.png" alt="MongoDB logo" /></li>
+                  <li><img src="img/express.png" alt="Express logo" /></li>
+                </ul>
+              </div>
+              <div class="text-flex">
+                <h4>Test user</h4>
+                <ul class="list-flex">
+                  <li>Username: <span>michal@email.com</span></li>
+                  <li>Password: <span>123456</span></li>
+                </ul>
+              </div>
+              <div class="project-action">
+                <a
+                  class="link link-triptracker"
+                  href="https://triptracker.onrender.com//"
+                  >Go to TripTracker deployed on Render</a
+                >
+                <a href="https://github.com/michalwojcieszek/TripTracker">
+                  <img
+                    class="github-logo"
+                    src="/img/github.png"
+                    alt="GitHub logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="project-img project-img-triptracker">
+              <img
+                src="/img/triptracker.png"
+                alt="TripTracker app on laptop, tablet and mobile phone"
+              />
             </div>
           </li>
         </ul>
       </section>
-      <section class="education"></section>
-      <section class="experience"></section>
-      <section class="languages"></section>
+      <!-- Education Section -->
+      <section class="container education">
+        <h2>Education</h2>
+        <div class="education-box">
+          <div>
+            <img
+              src="img/politechnika.png"
+              alt="Poznan University of Technology logo"
+            />
+          </div>
+          <div class="text-flex education-box-text">
+            <h3>Poznan University of Technology</h3>
+            <div class="text-flex education-box-text-sub">
+              <h4>master's degree</h4>
+              <h5>Computing</h5>
+              <p>2022 - now</p>
+            </div>
+            <div class="text-flex education-box-text-sub">
+              <h4>engineering degree</h4>
+              <h5>Logistics</h5>
+              <p>2018 - 2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Work Experience Section -->
+      <section class="container experience">
+        <h2>Work Experience</h2>
+        <div>
+          <div class="timeline">
+            <ul>
+              <li>
+                <div class="flex-col">
+                  <h3 class="greyed-out">[not a job]</h3>
+                  <h4
+                    >Full-time Frontend learning
+                    </h4
+                  >
+                  <h5>09.2023 - now</h5>
+                </div>
+                <div class="content">
+                  <p>
+                    I was aware that getting the first job in IT is
+                    time-consuming, so I decided to take a risky step to quit my
+                    job in logistics in order to learn web development on a
+                    full-time basis.
+                    I have learned HTML, CSS and React (with styling: Tailwind, Styled Components and UI State management: Redux, Context API)
+                    I have learned managed to make web apps with some backend (see in my projects section).
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="flex-col">
+                  <h3 class="greyed-out">Volkswagen Poznan</h3>
+                  <h4
+                    >Junior Specialist (Pre-series Logistics)
+                    </h4
+                  >
+                  <h5>09.2022 - 08.2023</h5>
+                </div>
+                <div class="content">
+                  <p>Specifying pre-series cars (selecting features) for internal clients. Setting up logistics rules that restrict specification. Conducting meetings regarding picking of parts. Meetings with German internal clients. Improvement of part's picking process and working on UN-ECE project.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="flex-col">
+                  <h3 class="greyed-out">Volkswagen Poznan</h3>
+                  <h4
+                    >Intern (Pre-series Logistics)
+                    </h4
+                  >
+                  <h5>08.2021 - 08.2022</h5>
+                </div>
+                <div class="content">
+                  <p>
+                    Work on the projects of pre-series cars that will  be produced for external clients in the future. Order picking and sending demands for new parts. Contact with other departments, conducting and participating in teleconferences.</p>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="flex-col">
+                  <h3 class="greyed-out">Volkswagen Poznan</h3>
+                  <h4
+                    >[Student's project with Volkswagen Poznan]
+                    </h4
+                  >
+                  <h5>03.2021 - 06.2021</h5>
+                </div>
+                <div class="content">
+                  <p>
+                    Streamlining the process in the enterprise. Material flow simulation on the H44 from goods entry to issue after commissioning of 
+                    the AKL (Automatic Small Container Warehouse).The project was made in  the LogABS simulation program and presented at the 12th Logistics Gala organized by the Poznań University of Technology.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="container languages">
+        <h2>Languages</h2>
+        <ul class="languages-box">
+          <li class="language flex-col">
+            <img src="/img/uk-col.png" alt="Flag of the United Kingdom"/>
+            <h3>English</h3>
+            <h4>C1</h4>
+            <div>
+              <h5>Certificate in Advanced English</h5>
+              <h5>Cambridge English Assessment</h5>
+            </div>
+            <div class="certificate-img">
+              <img src="/img/cambridge.png" alt="Logo of University of  Cambridge""/>
+            </div>
+          </li>
+          <li class="language flex-col">
+            <img src="/img/germany-col.png" alt="Flag of Germany"/>
+            <h3>German</h3>
+            <h4>C1</h4>
+            <div>
+              <h5>Certificate in Advanced English</h5>
+              <h5>Cambridge English Assessment</h5>
+            </div>
+            <div class="certificate-img">
+              <img src="/img/goethe.png" alt="Logo of University of  Cambridge""/>
+            </div>
+          </li>
+          <li class="language flex-col">
+            <img src="/img/poland-col.png" alt="Flag of Poland"/>
+            <h3>Polish</h3>
+            <h4>Native</h4>
+            <h5>Certificate in Advanced English</h5>
+            <h5>Cambridge English Assessment</h5>
+          </li>
+        </ul>
+      </section>
       <section class="certificate"></section>
     </main>
   </body>

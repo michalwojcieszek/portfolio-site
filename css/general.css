@@ -55,14 +55,23 @@ Medium: 11px
 */
 
 :root {
+  /* TEXT */
   --primary-color: #339af0;
   --secondary-color: #4dabf7;
   --text-color: #e9ecef;
   --text-color-secondary: #ced4da;
+  --text-color-dark: #b7b7b7;
+  /* BACKGROUND */
   --bg-primary-color: #212529;
   --bg-secondary-color: #343a40;
+  /* GRADIENTS */
   --gradient-bg: linear-gradient(to top, #212529, #212529);
   --gradient-primary: linear-gradient(to right, #339af0, #4dabf7);
+  /* PROJECTS */
+  --digitalgalaxy-color: #1c7ed6;
+  --digitalgalaxy-color-hover: #1971c2;
+  --triptracker-color: #40c057;
+  --triptracker-color-hover: #37b24d;
 }
 
 * {
@@ -94,6 +103,20 @@ header {
   justify-content: space-between;
 }
 
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
 li {
   list-style: none;
 }
@@ -104,15 +127,21 @@ a {
 }
 
 p {
-  line-height: 2rem;
+  line-height: 2.6rem;
+  font-size: 1.6rem;
 }
 
-.conatiner {
-  padding: 8rem 20rem;
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 8rem 20rem 0;
   /* background-color: white; */
 }
 
-.conatiner h2 {
+.container h2 {
   margin-bottom: 4rem;
   font-size: 2.4rem;
   text-transform: uppercase;
@@ -120,6 +149,13 @@ p {
   font-weight: 200;
 }
 
-.conatiner h3 {
+.container h3 {
   font-size: 6.4rem;
+  font-weight: 500;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
