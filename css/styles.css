@@ -1,10 +1,53 @@
+/* ============================== */
+/* HEADER + FOOTER PARTS */
+/* ============================== */
+
+header {
+  font-size: 1.4rem;
+}
+
 .main-nav-list {
   display: flex;
   justify-content: space-between;
   gap: 6rem;
-  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
+}
+
+header a {
+  display: inline-block;
+  position: relative;
+}
+
+header a::after,
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -6px;
+  left: 0;
+  transform: scaleX(0);
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+header a:hover::after,
+footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+header a:hover svg,
+header a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .contact-container {
@@ -34,6 +77,10 @@
   filter: grayscale(100%);
 }
 
+/* ============================== */
+/* HERO */
+/* ============================== */
+
 .hero {
   padding: 10rem 8rem 0 8rem;
   display: flex;
@@ -49,6 +96,10 @@
   align-items: center;
 }
 
+.hero-text:hover h1 {
+  transform: scale(1.05);
+}
+
 .hero-h1 {
   font-size: 12rem;
   font-weight: 900;
@@ -56,6 +107,7 @@
   background: -webkit-linear-gradient(#1c7ed6, #4dabf7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all ease-in-out 2s;
 }
 
 .hero-h2 {
@@ -71,13 +123,46 @@
   text-transform: uppercase;
   letter-spacing: 1.6rem;
   color: var(--text-color-secondary);
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--text-color-secondary); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-color-secondary);
+  }
 }
 
 .hero-img-container {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 999;
+
+  /* z-index: 999; */
+}
+
+.hero-img-container:hover::before {
+  transform: scale(1.1) translate(5%, -50%);
+  /* overflow: hidden; */
 }
 
 .hero-img-container::before {
@@ -91,6 +176,7 @@
   border-radius: 100%;
   background-image: var(--gradient-primary);
   z-index: -2;
+  transition: all ease 2s;
 }
 
 /* .hero-img-container::after {
@@ -110,9 +196,14 @@
   max-width: 50rem;
 }
 
+/* ============================== */
+/* SKILLS */
+/* ============================== */
+
 .skills {
   padding: 3rem 6rem;
   background-color: var(--bg-secondary-color);
+  z-index: 999;
 }
 
 .skills-ul {
@@ -122,6 +213,8 @@
 
 .skills-ul img {
   height: 6rem;
+  transition: all ease 1s;
+
   /* filter: brightness(0); */
   /* opacity: 50%; */
 }
@@ -133,6 +226,10 @@
   gap: 3rem;
 }
 
+.skills-ul li:hover img {
+  transform: scale(1.2);
+}
+
 .skills-ul {
   text-transform: uppercase;
   letter-spacing: 0.6rem;
@@ -140,9 +237,19 @@
   color: var(--text-color-dark);
 }
 
+/* ============================== */
+/* PROJECTS */
+/* ============================== */
+
 .project {
   display: flex;
   justify-content: space-between;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 
 .project-img {
@@ -284,23 +391,33 @@
   width: 2rem;
 }
 
+/* ============================== */
+/* EDUCATION */
+/* ============================== */
+
 .education-box {
   padding: 4rem 5rem;
-  background-color: var(--bg-secondary-color);
+  /* background-color: var(--bg-secondary-color); */
   border-radius: 2rem;
   color: var(--text-color-dark);
   display: flex;
   gap: 4rem;
+  transition: all ease 600ms;
+  background-color: var(--bg-secondary-color);
 }
 
 .education-box img {
   width: 30rem;
-}
-
-.education-box:hover img {
-  transform: rotate(10deg);
   transition: all ease 600ms;
 }
+
+.education-box:hover {
+  background-color: var(--bg-secondary-color);
+}
+
+/* .education-box:hover h3 {
+  color: var(--primary-color);
+} */
 
 .education-box h3 {
   color: var(--text-color-secondary);
@@ -311,6 +428,7 @@
   text-decoration: underline;
   text-underline-offset: 1.6rem;
   text-decoration-thickness: 1px;
+  transition: all ease 600ms;
 }
 
 .education-box-text {
@@ -324,10 +442,15 @@
 .education-box-text-sub h4 {
   font-size: 3rem;
   letter-spacing: 0.4rem;
+  /* color: var(--primary-color); */
 }
 .education-box-text-sub h5 {
   font-size: 2.4rem;
 }
+
+/* ============================== */
+/* EXPERIENCE */
+/* ============================== */
 
 .timeline {
   padding: 30px 20px;
@@ -337,10 +460,10 @@
 .timeline ul {
   list-style-type: none;
   border-left: 2px solid var(--text-color-dark);
-  padding: 10px 5px;
+  padding: 1rem 0.5rem;
 }
 .timeline ul li {
-  padding: 20px 20px;
+  padding: 2.5rem 2rem;
   position: relative;
   cursor: pointer;
   transition: 0.5s;
@@ -351,11 +474,11 @@
 
 .timeline ul li h3 {
   font-size: 2.4rem;
+  /* font-weight: 300; */
 }
 
 .timeline ul li h4 {
-  color: var(--primary-color);
-  /* color: var(--text-color-dark); */
+  color: var(--text-color-dark);
   font-size: 2.6rem;
   padding-top: 5px;
 }
@@ -390,6 +513,10 @@
   border-radius: 1rem;
 }
 
+.timeline ul li:hover h4 {
+  color: var(--primary-color);
+}
+
 .timeline ul li:hover:before {
   background-color: var(--primary-color);
   box-shadow: 0px 0px 10px 2px var(--primary-color);
@@ -397,6 +524,14 @@
 
 .timeline .flex-col {
   gap: 0.6rem;
+}
+
+/* ============================== */
+/* LANGUAGES */
+/* ============================== */
+
+.languages {
+  margin-bottom: 10rem;
 }
 
 .languages-box {
@@ -408,7 +543,7 @@
 .language {
   background-color: var(--bg-secondary-color);
   border-radius: 2rem;
-  padding: 10rem 5rem 4rem;
+  padding: 10rem 2rem 4rem;
   text-align: center;
   align-items: center;
   gap: 2.6rem;
@@ -418,12 +553,30 @@
 .language h3 {
   text-transform: uppercase;
   font-size: 2rem;
+  letter-spacing: 0.2rem;
 }
 
 .language h4 {
   text-transform: uppercase;
+  color: var(--text-color-dark);
   font-size: 4rem;
   letter-spacing: 0.4rem;
+}
+
+.certificate {
+  gap: 1.6rem;
+}
+
+.language h5 {
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+.language h6 {
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: var(--text-color-dark);
 }
 
 .language:hover {
@@ -440,7 +593,7 @@
 }
 
 .language img {
-  width: 50%;
+  width: 20rem;
   height: 10rem;
 }
 
@@ -450,4 +603,13 @@
 
 .certificate-img img {
   width: 100%;
+}
+
+/* ============================== */
+/* FOOTER */
+/* ============================== */
+
+footer h3 {
+  font-size: 2rem;
+  font-weight: 300;
 }
