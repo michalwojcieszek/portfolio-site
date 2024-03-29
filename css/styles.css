@@ -14,13 +14,14 @@ header {
   letter-spacing: 0.6rem;
 }
 
-header a {
+.a-text,
+.main-nav-list a {
   display: inline-block;
   position: relative;
 }
 
-header a::after,
-footer a::after {
+.a-text::after,
+.main-nav-list a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -33,14 +34,15 @@ footer a::after {
   transition: transform 0.25s ease-out;
 }
 
-header a:hover::after,
-footer a:hover::after {
+.a-text:hover::after,
+.main-nav-list a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-header a:hover svg,
-header a:hover {
+.a-text:hover svg,
+.a-text:hover,
+.main-nav-list a:hover {
   color: var(--primary-color);
 }
 
@@ -72,9 +74,14 @@ header a:hover {
   height: 2.4rem;
 }
 
-.logo-linkedin {
+.social-logo {
   height: 3rem;
   filter: grayscale(100%);
+  transition: all ease 300ms;
+}
+
+.social-logo:hover {
+  filter: none;
 }
 
 /* ============================== */
@@ -107,7 +114,8 @@ header a:hover {
   background: -webkit-linear-gradient(#1c7ed6, #4dabf7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all ease-in-out 2s;
+  transition: all ease 600ms;
+  animation: 2s ease-in-out 0s 1 grow;
 }
 
 .hero-h2 {
@@ -152,12 +160,42 @@ header a:hover {
   }
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translate(15%, -50%);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .hero-img-container {
   display: flex;
   justify-content: center;
   position: relative;
-
   /* z-index: 999; */
+}
+
+.hero-img-container img {
+  animation: 3s ease-in-out 0s 1 slideInFromRight;
 }
 
 .hero-img-container:hover::before {
@@ -176,7 +214,8 @@ header a:hover {
   border-radius: 100%;
   background-image: var(--gradient-primary);
   z-index: -2;
-  transition: all ease 2s;
+  transition: all ease 600ms;
+  animation: 3s ease-out 0s 1 slideInFromLeft;
 }
 
 /* .hero-img-container::after {
@@ -213,7 +252,7 @@ header a:hover {
 
 .skills-ul img {
   height: 6rem;
-  transition: all ease 1s;
+  transition: all ease 600ms;
 
   /* filter: brightness(0); */
   /* opacity: 50%; */
@@ -246,10 +285,12 @@ header a:hover {
   justify-content: space-between;
 }
 
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
+.projects-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 10rem;
+  column-gap: 4rem;
 }
 
 .project-img {
@@ -354,6 +395,7 @@ header a:hover {
 
 .github-logo {
   width: 3rem;
+  filter: grayscale(100%);
 }
 
 .project-img img {
