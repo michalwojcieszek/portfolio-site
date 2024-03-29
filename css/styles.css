@@ -283,6 +283,7 @@ header a:hover {
 .project li {
   font-size: 1.6rem;
   font-weight: 300;
+  text-justify: inter-word;
 }
 
 .project span {
@@ -341,6 +342,16 @@ header a:hover {
   background-color: var(--triptracker-color-hover);
 }
 
+.link-budgetmaster {
+  background-color: var(--budgetmaster-color);
+  color: var(--bg-secondary-color);
+}
+
+.link-budgetmaster:active,
+.link-budgetmaster:hover {
+  background-color: var(--budgetmaster-color-hover);
+}
+
 .github-logo {
   width: 3rem;
 }
@@ -373,12 +384,20 @@ header a:hover {
   background-color: var(--triptracker-color);
 }
 
+.project-img-budgetmaster::before {
+  background-color: var(--budgetmaster-color);
+}
+
 .digitalgalaxy {
   color: var(--digitalgalaxy-color);
 }
 
 .triptracker {
   color: var(--triptracker-color);
+}
+
+.budgetmaster {
+  color: var(--budgetmaster-color);
 }
 
 .technologies-logos-list {
@@ -603,6 +622,12 @@ header a:hover {
 
 .certificate-img img {
   width: 100%;
+}
+
+.polish-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ============================== */
