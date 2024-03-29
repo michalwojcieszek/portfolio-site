@@ -287,16 +287,11 @@ header {
 
 .projects-list-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 30rem;
   grid-template-rows: 1fr;
   row-gap: 10rem;
   column-gap: 4rem;
-}
-
-.project-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 100rem;
 }
 
 .project-text {
@@ -305,6 +300,32 @@ header {
   /* align-items: center; */
   flex-direction: column;
   gap: 3rem;
+}
+
+.project-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img img {
+  /* width: 100rem; */
+}
+
+.project-img {
+  position: relative;
+}
+
+.project-img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60rem;
+  height: 60rem;
+  top: 50%;
+  transform: translate(15%, -50%);
+  border-radius: 100%;
+  z-index: -2;
 }
 
 .project h4 {
@@ -396,26 +417,6 @@ header {
 .github-logo {
   width: 3rem;
   filter: grayscale(100%);
-}
-
-.project-img img {
-  width: 100rem;
-}
-
-.project-img {
-  position: relative;
-}
-
-.project-img::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 60rem;
-  height: 60rem;
-  top: 50%;
-  transform: translate(15%, -50%);
-  border-radius: 100%;
-  z-index: -2;
 }
 
 .project-img-digitalgalaxy::before {
