@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -139,8 +139,8 @@
       <!-- Projects Section -->
       <section class="container projects" id="projects">
         <h2>My React projects</h2>
-        <ul class="projects-list-grid">
-          <!-- DigitalGalaxy Project -->
+        <div class="projects-list-grid project">   
+            <!-- DigitalGalaxy Project -->
             <div class="project-text">
               <div class="text-flex">
                 <h5>Mern app</h5>
@@ -198,12 +198,11 @@
               </div>
               <div class="project-action">
                 <a
-                  class="link link-digitalgalaxy"
-                  href="https://digitalgalaxy.onrender.com/"
-                  >Go to DigitalGalaxy deployed on Render</a
-                >
-                <a href="https://github.com/michalwojcieszek/DigitalGalaxy">
-                  <img
+                class="link link-digitalgalaxy"
+                href="https://digitalgalaxy.onrender.com/"
+                >Go to DigitalGalaxy deployed on Render</a
+              >
+              <a href="https://github.com/michalwojcieszek/DigitalGalaxy">                  <img
                     class="github-logo"
                     src="/img/github.png"
                     alt="GitHub logo"
@@ -211,13 +210,12 @@
                 </a>
               </div>
             </div>
-            <div class="project-img project-img-digitalgalaxy">
+            <div class="project-img-box project-img-box-digitalgalaxy">
               <img
                 src="/img/projects/digitalgalaxy.png"
-                alt="DigitalGalaxy app on laptop, tablet and mobile phone"
+                alt="TripTracker app on laptop, tablet and mobile phone"
               />
             </div>
-            <!-- TripTracker Project -->
             <div class="project-text">
               <div class="text-flex">
                 <h5>Mern app</h5>
@@ -289,7 +287,7 @@
                 </a>
               </div>
             </div>
-            <div class="project-img project-img-triptracker">
+            <div class="project-img-box project-img-box-triptracker">
               <img
                 src="/img/projects/triptracker.png"
                 alt="TripTracker app on laptop, tablet and mobile phone"
@@ -359,13 +357,13 @@ BudgetMaster is the web app that allows users to track their budget in terms on 
                 </a>
               </div>
             </div>
-            <div class="project-img project-img-budgetmaster">
+            <div class="project-img-box project-img-box-budgetmaster">
               <img
                 src="/img/projects/budgetmaster.png"
                 alt="TripTracker app on laptop, tablet and mobile phone"
               />
             </div>
-        </ul>
+        </div>
       </section>
       <!-- Education Section -->
       <section class="container education" id="education">
