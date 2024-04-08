@@ -287,17 +287,16 @@ header {
 
 .projects-list-grid {
   display: grid;
-  grid-template-columns: 1fr 30rem;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   row-gap: 10rem;
-  column-gap: 4rem;
-  max-width: 100rem;
+  column-gap: 2rem;
+  /* max-width: 100rem; */
 }
 
 .project-text {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   gap: 3rem;
 }
@@ -306,10 +305,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* width: 30px; */
 }
 
 .project-img img {
-  /* width: 100rem; */
+  width: 100%;
 }
 
 .project-img {
@@ -475,6 +475,10 @@ header {
 
 .education-box:hover {
   background-color: var(--bg-secondary-color);
+}
+
+.education-box:hover img {
+  transform: rotate(5deg);
 }
 
 /* .education-box:hover h3 {
