@@ -92,6 +92,7 @@ html {
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
   line-height: 1;
   font-weight: 300;
   color: var(--text-color);
@@ -103,6 +104,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 9999;
 }
 
 footer {

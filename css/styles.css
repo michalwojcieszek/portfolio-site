@@ -9,7 +9,7 @@ header {
 .main-nav-list {
   display: flex;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 5rem;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
 }
@@ -46,32 +46,35 @@ header {
   color: var(--primary-color);
 }
 
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  z-index: 9999;
+  cursor: pointer;
+  color: var(--primary-color);
+  filter: grayscale(100%);
+  width: 4.8rem;
+}
+
+.btn-mobile-nav:hover,
+.btn-mobile-nav:active {
+  filter: none;
+}
+
+.icon-menu {
+  display: block;
+}
+
+.icon-close {
+  display: none;
+}
+
 .social-links {
   display: flex;
   align-items: center;
   gap: 2rem;
-}
-
-.contact-container {
-  display: flex;
-  gap: 6rem;
-  align-items: center;
-}
-
-.contact-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
-}
-
-.contact-icon {
-  color: var(--text-color);
-  width: 2.4rem;
-  height: 2.4rem;
+  z-index: 9999;
 }
 
 .social-logo {
@@ -233,6 +236,7 @@ header {
 } */
 
 .hero-img-container img {
+  z-index: -1;
   max-width: 50rem;
 }
 
@@ -243,12 +247,12 @@ header {
 .skills {
   padding: 3rem 6rem;
   background-color: var(--bg-secondary-color);
-  z-index: 999;
+  /* z-index: 2; */
 }
 
 .skills-ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .skills-ul img {
@@ -260,10 +264,12 @@ header {
 }
 
 .skills-ul li {
+  width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  text-align: center;
 }
 
 .skills-ul li:hover img {
@@ -283,7 +289,7 @@ header {
 
 .projects-list-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1.5fr;
   column-gap: 2rem;
   row-gap: 8rem;
 }
@@ -356,7 +362,7 @@ header {
 }
 
 .projects-list-grid p,
-.projects-list-grid li {
+.projects-list-grid {
   font-size: 1.6rem;
   font-weight: 300;
   text-justify: inter-word;
@@ -698,4 +704,42 @@ header {
 footer h3 {
   font-size: 2rem;
   font-weight: 300;
+}
+
+footer {
+  color: var(--primary-color);
+}
+
+.contact-container {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.contact-box,
+.footer a,
+footer h3 {
+  filter: grayscale(100%);
+}
+
+.footer a:hover,
+.contact-icon:hover,
+footer h3:hover {
+  filter: none;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--primary-color);
+}
+
+.contact-icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
