@@ -22,7 +22,7 @@
   }
 
   .hero {
-    padding: 4rem 4rem 0 8rem;
+    padding: 0 4rem;
   }
   .hero-h1 {
     font-size: 10rem;
@@ -124,7 +124,7 @@
 /* MOBILE MENU */
 @media (max-width: 1150px) {
   .main-nav {
-    background-image: var(--gradient-bg);
+    background-color: var(--bg-primary-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -180,7 +180,7 @@
     text-justify: inter-word;
   }
   .hero {
-    padding: 3rem 6rem 0 6rem;
+    padding: 0 3rem;
   }
   .hero-h1 {
     font-size: 8rem;
@@ -219,7 +219,7 @@
   }
 
   .hero {
-    padding: 3rem 3rem 0 6rem;
+    padding: 0 3rem;
   }
 
   .hero-h2 {
