@@ -6,6 +6,14 @@ header {
   font-size: 1.4rem;
 }
 
+.contact-icon {
+  width: 3rem;
+}
+
+.contact-icon:hover {
+  filter: none;
+}
+
 .main-nav-list {
   display: flex;
   justify-content: space-between;
@@ -68,6 +76,7 @@ header {
 
 .icon-close {
   display: none;
+  transform: rotate(90deg);
 }
 
 .social-links {
@@ -79,8 +88,8 @@ header {
 
 .social-logo {
   height: 3rem;
-  filter: grayscale(100%);
   transition: all ease 300ms;
+  filter: grayscale(100%);
 }
 
 .social-logo:hover {
@@ -478,27 +487,30 @@ header {
 /* ============================== */
 
 .education-box {
-  padding: 4rem 5rem;
-  /* background-color: var(--bg-secondary-color); */
+  padding: 4rem 3rem;
+  background-color: var(--bg-secondary-color);
   border-radius: 2rem;
   color: var(--text-color-dark);
-  display: flex;
-  gap: 4rem;
   transition: all ease 600ms;
-  background-color: var(--bg-secondary-color);
+  /* border: solid var(--text-color-dark) 0.3rem; */
+  display: inline-block;
+}
+
+.education-box-flex {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .education-box img {
-  width: 30rem;
+  /* height: 100%;  */
+  width: 24rem;
   transition: all ease 600ms;
-}
-
-.education-box:hover {
-  background-color: var(--bg-secondary-color);
 }
 
 .education-box:hover img {
   transform: rotate(5deg);
+  transform: scale(1.05);
 }
 
 /* .education-box:hover h3 {
@@ -508,10 +520,12 @@ header {
 .education-box h3 {
   color: var(--text-color-secondary);
   /* text-transform: uppercase; */
-  font-size: 4rem;
-  letter-spacing: 0.5rem;
+  font-size: 5rem;
+  /* letter-spacing: 0.4rem; */
   font-weight: 500;
-  text-decoration: underline;
+  margin-bottom: 3rem;
+  /* text-transform: uppercase; */
+  /* text-decoration: underline; */
   text-underline-offset: 1.6rem;
   text-decoration-thickness: 1px;
   transition: all ease 600ms;
@@ -526,12 +540,13 @@ header {
 }
 
 .education-box-text-sub h4 {
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0.4rem;
-  /* color: var(--primary-color); */
 }
+
 .education-box-text-sub h5 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
+  color: var(--primary-color);
 }
 
 /* ============================== */
@@ -539,8 +554,8 @@ header {
 /* ============================== */
 
 .timeline {
-  padding: 30px 20px;
-  width: 80%;
+  padding: 0px 20px;
+  /* width: 80%; */
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 .timeline ul {
@@ -560,13 +575,15 @@ header {
 
 .timeline ul li h3 {
   font-size: 2.4rem;
+  margin-bottom: 0.5rem;
   /* font-weight: 300; */
 }
 
 .timeline ul li h4 {
-  color: var(--text-color-dark);
+  /* color: var(--text-color-dark); */
+  color: var(--primary-color);
   font-size: 2.6rem;
-  padding-top: 5px;
+  letter-spacing: 0.4rem;
 }
 
 .timeline ul li h5 {
@@ -599,9 +616,9 @@ header {
   border-radius: 1rem;
 }
 
-.timeline ul li:hover h4 {
+/* .timeline ul li:hover h4 {
   color: var(--primary-color);
-}
+} */
 
 .timeline ul li:hover:before {
   background-color: var(--primary-color);
@@ -617,7 +634,7 @@ header {
 /* ============================== */
 
 .languages {
-  margin-bottom: 10rem;
+  padding-bottom: 8rem;
 }
 
 .languages-box {
@@ -629,11 +646,18 @@ header {
 .language {
   background-color: var(--bg-secondary-color);
   border-radius: 2rem;
-  padding: 10rem 2rem 4rem;
+  padding: 6rem 2rem;
   text-align: center;
   align-items: center;
-  gap: 2.6rem;
+  row-gap: 3.2rem;
   transition: all ease 600ms;
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 3fr; */
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+  /* align-content: stretch; */
+  /* justify-content: flex-end; */
 }
 
 .language h3 {
@@ -651,10 +675,18 @@ header {
 
 .certificate {
   gap: 1.6rem;
+  height: 7rem;
+  justify-content: center;
+}
+
+.certificate-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language h5 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 300;
 }
 
@@ -669,18 +701,15 @@ header {
   transform: translate(0, -10px);
 }
 
-.language img {
+.flag-img {
   transition: all ease 600ms;
   filter: grayscale(80%);
+  height: 10rem;
+  width: 20rem;
 }
 
 .language:hover img {
   filter: none;
-}
-
-.language img {
-  width: 20rem;
-  height: 10rem;
 }
 
 .certificate-img {
@@ -688,7 +717,7 @@ header {
 }
 
 .certificate-img img {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .polish-language {
@@ -703,28 +732,39 @@ header {
 
 footer h3 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 footer {
   color: var(--primary-color);
+  font-weight: 500;
 }
 
 .contact-container {
   display: flex;
-  gap: 6rem;
+  gap: 2rem;
   align-items: center;
 }
 
-.contact-box,
-.footer a,
-footer h3 {
+.mail,
+.phone,
+.author,
+.linkedin,
+.github {
   filter: grayscale(100%);
+  color: var(--primary-color);
+  transition: all ease 300ms;
 }
 
-.footer a:hover,
-.contact-icon:hover,
-footer h3:hover {
+.mail:hover,
+.phone:hover,
+.author:hover,
+.linkedin:hover,
+.github:hover {
+  filter: none;
+}
+
+.contact-box {
   filter: none;
 }
 
@@ -736,10 +776,9 @@ footer h3:hover {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  color: var(--primary-color);
 }
 
-.contact-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+.contact-links {
+  display: flex;
+  gap: 2rem;
 }
