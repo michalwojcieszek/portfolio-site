@@ -212,6 +212,10 @@
     padding-bottom: 50%;
   }
 
+  .project-circle-scale::before {
+    transform: scale(1.1);
+  }
+
   .hero-h1 {
     font-size: 7rem;
   }
@@ -451,6 +455,7 @@
     /* background-color: white; */
   }
 
+  /* LANGUAGES */
   .languages {
     padding-bottom: 4rem;
   }
