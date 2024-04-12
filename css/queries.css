@@ -283,8 +283,6 @@
   }
 
   .flag-img {
-    /* transition: all ease 600ms; */
-    /* filter: grayscale(80%); */
     height: 8rem;
     width: 16rem;
   }
@@ -471,6 +469,16 @@
     gap: 1.2rem;
   }
 
+  /* PROJECTS */
+  .container h3 {
+    font-size: 3.4rem;
+  }
+
+  .projects-list-grid h5 {
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  }
+
   /* EXPERIENCE */
   .timeline-active {
     background-color: var(--bg-secondary-color);
@@ -478,7 +486,7 @@
   }
 
   .timeline-active:before {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
     box-shadow: 0px 0px 10px 2px var(--primary-color);
   }
 
@@ -493,11 +501,55 @@
     letter-spacing: 0.4rem;
   }
 
+  /* LANGUAGES */
+  .flag-img {
+    /* transition: all ease 600ms; */
+    /* filter: grayscale(80%); */
+    height: 8rem;
+    width: 16rem;
+  }
+
   .languages-box {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 5rem 1rem 0;
+    margin: 0 1rem;
+    /* background-color: white; */
+  }
+
+  .languages {
+    padding-bottom: 2rem;
+  }
+
+  /* SKILLS */
+  .skills-ul img {
+    height: 2rem;
+  }
+
+  .skills-ul {
+    letter-spacing: 0.1rem;
+    font-size: 0.4rem;
+  }
+
+  .skills-ul li {
+    gap: 0.8rem;
+  }
+
+  /* PROJECTS */
+  .container h3 {
+    font-size: 3rem;
+  }
+
+  /* .projects-list-grid h5 {
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  } */
 }
 
 @media (max-width: 300px) {
