@@ -95,8 +95,7 @@ const projectImgBoxes = document.querySelectorAll(".project-img-box");
 // Function to check if an element is in the viewport
 const isInViewport = (elem) => {
   const bounding = elem.getBoundingClientRect();
-  const threshold = window.innerHeight * 0.4; // 10% of the viewport height
-
+  const threshold = window.innerHeight * 0.4;
   return (
     bounding.top >= -threshold &&
     bounding.bottom <=

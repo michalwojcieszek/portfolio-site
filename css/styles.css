@@ -346,7 +346,7 @@ header {
   padding-bottom: 30%;
   border-radius: 100%;
   z-index: -2;
-  transition: all ease 1000ms;
+  transition: all ease 2000ms;
 }
 
 .test-user {
