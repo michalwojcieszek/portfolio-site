@@ -12,13 +12,9 @@ linkEl.forEach(function (link) {
   });
 });
 
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 50) {
-//     $("#dynamic").addClass("color-language");
-//   } else {
-//     $("#dynamic").removeClass("color-language");
-//   }
-// });
+// ******************************
+// FLAGS
+// ******************************
 
 // Get all elements with the class 'flag-img'
 const flagImages = document.querySelectorAll(".flag-img");
@@ -53,6 +49,10 @@ window.addEventListener("scroll", handleScrollFlag);
 // Initially check elements in viewport
 handleScrollFlag();
 
+// ******************************
+// TIMELINE
+// ******************************
+
 // Get all elements with the class 'timeline-element'
 const timelineElements = document.querySelectorAll(".timeline-element");
 
@@ -84,3 +84,39 @@ window.addEventListener("scroll", handleScrollTimeline);
 
 // Initially check elements in viewport
 handleScrollTimeline();
+
+// ******************************
+// PROJECT CIRCLE
+// ******************************
+
+// Get all elements with the class 'project-img-box'
+const projectImgBoxes = document.querySelectorAll(".project-img-box");
+
+// Function to check if an element is in the viewport
+const isInViewport = (elem) => {
+  const bounding = elem.getBoundingClientRect();
+  const threshold = window.innerHeight * 0.4; // 10% of the viewport height
+
+  return (
+    bounding.top >= -threshold &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) + threshold
+  );
+};
+
+// Function to handle scroll event
+const handleScroll = () => {
+  projectImgBoxes.forEach((imgBox) => {
+    if (isInViewport(imgBox)) {
+      imgBox.classList.add("project-circle-scale");
+    } else {
+      imgBox.classList.remove("project-circle-scale");
+    }
+  });
+};
+
+// Add scroll event listener to window
+window.addEventListener("scroll", handleScroll);
+
+// Initially check elements in viewport
+handleScroll();
