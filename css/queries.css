@@ -61,6 +61,19 @@
   .hero-h1 {
     text-align: center;
   }
+  .skills {
+    padding: 3rem 4rem;
+  }
+
+  .skills-ul img {
+    height: 5rem;
+  }
+
+  .skills-ul {
+    letter-spacing: 0.4rem;
+    font-size: 0.9rem;
+  }
+
   .container {
     padding: 6rem 6rem 0;
     margin: 0 1rem;
@@ -112,8 +125,8 @@
   }
 
   .skills-ul {
-    letter-spacing: 0.6rem;
-    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    font-size: 0.9rem;
   }
 
   .projects-list-grid p,
@@ -256,8 +269,8 @@
   }
 
   .skills-ul {
-    letter-spacing: 0.4rem;
-    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
   }
 
   .hero-text {
